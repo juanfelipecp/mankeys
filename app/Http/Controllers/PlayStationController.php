@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\usuario;
+use App\play_station;
 use Illuminate\Http\Request;
 
-class UsuarioController extends Controller
+class PlayStationController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,7 +14,8 @@ class UsuarioController extends Controller
      */
     public function index()
     {
-        //
+        $play=play_station::all();
+        return view('play.play',compact('play'));
     }
 
     /**
@@ -41,10 +42,10 @@ class UsuarioController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\usuario  $usuario
+     * @param  \App\play_station  $play_station
      * @return \Illuminate\Http\Response
      */
-    public function show(usuario $usuario)
+    public function show(play_station $play_station)
     {
         //
     }
@@ -52,10 +53,10 @@ class UsuarioController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\usuario  $usuario
+     * @param  \App\play_station  $play_station
      * @return \Illuminate\Http\Response
      */
-    public function edit(usuario $usuario)
+    public function edit(play_station $play_station)
     {
         //
     }
@@ -64,10 +65,10 @@ class UsuarioController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\usuario  $usuario
+     * @param  \App\play_station  $play_station
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, usuario $usuario)
+    public function update(Request $request, play_station $play_station)
     {
         //
     }
@@ -75,10 +76,10 @@ class UsuarioController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\usuario  $usuario
+     * @param  \App\play_station  $play_station
      * @return \Illuminate\Http\Response
      */
-    public function destroy(usuario $usuario)
+    public function destroy(play_station $play_station)
     {
         //
     }

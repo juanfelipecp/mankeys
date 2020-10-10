@@ -210,6 +210,27 @@
         </a>
       </div>
 
+
+      <div class="container">
+        <div class='row'>
+            @foreach ($xbox as $xbox)
+                <p class='col-xs-2 col-md'>
+                <div class="card" style="width: 18rem;">
+                    <img src="{{ $xbox->img }}" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">{{ $xbox->nombre }}</h5>
+                        <p class="card-text">{{ $xbox->descripcion }}</p>
+                        <h6 class="card-text">{{ $xbox->precio }}</h6>
+                        <a href="#" class="btn btn-primary">ir a la oferta</a>
+                    </div>
+                </div>
+                </p>
+            @endforeach
+
+        </div>
+    </div>
+
+
       
 
     <!-- Optional JavaScript -->

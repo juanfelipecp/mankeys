@@ -211,7 +211,25 @@
         </a>
       </div>
 
-      
+      <div class="container">
+        <div class='row'>
+            @foreach ($play as $play)
+                <p class='col-xs-2 col-md'>
+                <div class="card" style="width: 18rem;">
+                    <img src="{{ $play->img }}" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">{{ $play->nombre }}</h5>
+                        <p class="card-text">{{ $play->descripcion }}</p>
+                        <h6 class="card-text">{{ $play->precio }}</h6>
+                        <a href="#" class="btn btn-primary">ir a la oferta</a>
+                    </div>
+                </div>
+                </p>
+            @endforeach
+
+        </div>
+    </div>
+  
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->

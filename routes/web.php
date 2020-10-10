@@ -11,22 +11,26 @@
 |
 */
 
-Route::get('/', 'index@index')
+Route::get('/', 'IndexController@index')
     ->name('indexp');
 
-Route::get('/pc', 'pc@index')
+Route::get('/pc', 'PcController@index')
     ->name('pcp');
-Route::get('/nintendo', 'nintendo@index')
+Route::get('/nintendo', 'NintendoController@index')
     ->name('nintendop');
 
-Route::get('/playstation', 'play_station@index')
+Route::get('/playstation', 'PlaystationController@index')
     ->name('playp');
 
-Route::get('/xbox', 'xbox@index')
+Route::get('/xbox', 'XboxController@index')
     ->name('xboxp');
 
-    Route::get('/preguntas', 'admin@preguntas')
+    Route::get('/preguntas', 'AdminController@index')
     ->name('preguntasp');
+
+
+    Route::get('/preguntas/store', 'AdminController@store')
+    ->name('store');
 
 /*Route::get('/', function () {
     return view('index');

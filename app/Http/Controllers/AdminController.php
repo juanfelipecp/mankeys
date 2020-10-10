@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\cr;
+use App\admin;
 use Illuminate\Http\Request;
 
-class nintendo extends Controller
+class AdminController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,7 +14,7 @@ class nintendo extends Controller
      */
     public function index()
     {
-        return view('nintendo.nintendo');
+        return view('admin.preguntas');
     }
 
     /**
@@ -35,16 +35,22 @@ class nintendo extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'email' => 'required',
+            'pregunta' => 'required'
+        ]);
+
+        admin::create($request->all());
+        return redirect()->route('preguntasp');
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\cr  $cr
+     * @param  \App\admin  $admin
      * @return \Illuminate\Http\Response
      */
-    public function show(cr $cr)
+    public function show(admin $admin)
     {
         //
     }
@@ -52,10 +58,10 @@ class nintendo extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\cr  $cr
+     * @param  \App\admin  $admin
      * @return \Illuminate\Http\Response
      */
-    public function edit(cr $cr)
+    public function edit(admin $admin)
     {
         //
     }
@@ -64,10 +70,10 @@ class nintendo extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\cr  $cr
+     * @param  \App\admin  $admin
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, cr $cr)
+    public function update(Request $request, admin $admin)
     {
         //
     }
@@ -75,10 +81,10 @@ class nintendo extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\cr  $cr
+     * @param  \App\admin  $admin
      * @return \Illuminate\Http\Response
      */
-    public function destroy(cr $cr)
+    public function destroy(admin $admin)
     {
         //
     }

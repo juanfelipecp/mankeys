@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\cr;
+use App\nintendo;
 use Illuminate\Http\Request;
 
-class play_station extends Controller
+class NintendoController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,7 +14,11 @@ class play_station extends Controller
      */
     public function index()
     {
-        return view('play.play');
+        $carrusel1=nintendo::select('SELECT * FROM nintendos WHERE id_nintendo = 1', [1]);
+        $carrusel2=nintendo::select('SELECT * FROM nintendos WHERE id_nintendo = 2', [1]);
+        $carrusel3=nintendo::select('SELECT * FROM nintendos WHERE id_nintendo = 3', [1]);
+        $nintendo=nintendo::all();
+        return view('nintendo.nintendo',compact('nintendo','carrusel1','carrusel2'));
     }
 
     /**
@@ -41,10 +45,10 @@ class play_station extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\cr  $cr
+     * @param  \App\nintendo  $nintendo
      * @return \Illuminate\Http\Response
      */
-    public function show(cr $cr)
+    public function show(nintendo $nintendo)
     {
         //
     }
@@ -52,10 +56,10 @@ class play_station extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\cr  $cr
+     * @param  \App\nintendo  $nintendo
      * @return \Illuminate\Http\Response
      */
-    public function edit(cr $cr)
+    public function edit(nintendo $nintendo)
     {
         //
     }
@@ -64,10 +68,10 @@ class play_station extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\cr  $cr
+     * @param  \App\nintendo  $nintendo
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, cr $cr)
+    public function update(Request $request, nintendo $nintendo)
     {
         //
     }
@@ -75,10 +79,10 @@ class play_station extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\cr  $cr
+     * @param  \App\nintendo  $nintendo
      * @return \Illuminate\Http\Response
      */
-    public function destroy(cr $cr)
+    public function destroy(nintendo $nintendo)
     {
         //
     }

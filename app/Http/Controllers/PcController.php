@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\cr;
+use App\pc;
 use Illuminate\Http\Request;
 
-class xbox extends Controller
+class PcController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,7 +14,8 @@ class xbox extends Controller
      */
     public function index()
     {
-        return view('xbox.xbox');
+        $pc=pc::all();
+        return view('pc.pc',compact('pc'));
     }
 
     /**
@@ -41,10 +42,10 @@ class xbox extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\cr  $cr
+     * @param  \App\pc  $pc
      * @return \Illuminate\Http\Response
      */
-    public function show(cr $cr)
+    public function show(pc $pc)
     {
         //
     }
@@ -52,10 +53,10 @@ class xbox extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\cr  $cr
+     * @param  \App\pc  $pc
      * @return \Illuminate\Http\Response
      */
-    public function edit(cr $cr)
+    public function edit(pc $pc)
     {
         //
     }
@@ -64,10 +65,10 @@ class xbox extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\cr  $cr
+     * @param  \App\pc  $pc
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, cr $cr)
+    public function update(Request $request, pc $pc)
     {
         //
     }
@@ -75,10 +76,10 @@ class xbox extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\cr  $cr
+     * @param  \App\pc  $pc
      * @return \Illuminate\Http\Response
      */
-    public function destroy(cr $cr)
+    public function destroy(pc $pc)
     {
         //
     }

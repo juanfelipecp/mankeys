@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\cr;
+use App\xbox;
 use Illuminate\Http\Request;
 
-class index extends Controller
+class XboxController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,7 +14,8 @@ class index extends Controller
      */
     public function index()
     {
-        return view('index.index');
+        $xbox=xbox::all();
+        return view('xbox.xbox',compact('xbox'));
     }
 
     /**
@@ -41,10 +42,10 @@ class index extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\cr  $cr
+     * @param  \App\xbox  $xbox
      * @return \Illuminate\Http\Response
      */
-    public function show(cr $cr)
+    public function show(xbox $xbox)
     {
         //
     }
@@ -52,10 +53,10 @@ class index extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\cr  $cr
+     * @param  \App\xbox  $xbox
      * @return \Illuminate\Http\Response
      */
-    public function edit(cr $cr)
+    public function edit(xbox $xbox)
     {
         //
     }
@@ -64,10 +65,10 @@ class index extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\cr  $cr
+     * @param  \App\xbox  $xbox
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, cr $cr)
+    public function update(Request $request, xbox $xbox)
     {
         //
     }
@@ -75,10 +76,10 @@ class index extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\cr  $cr
+     * @param  \App\xbox  $xbox
      * @return \Illuminate\Http\Response
      */
-    public function destroy(cr $cr)
+    public function destroy(xbox $xbox)
     {
         //
     }

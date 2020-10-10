@@ -167,9 +167,9 @@
           <div class="navbar-nav">
             <a class="nav-link active" href="{{ route('pcp') }}">pc <span class="sr-only">(current)</span></a>
             <a class="nav-link" href="{{ route('nintendop') }}">nintendo</a>
-            <a class="nav-link" href="#">play station</a>
-            <a class="nav-link" href="#">xbox</a>
-            <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">preguntas</a>
+            <a class="nav-link" href="{{ route('playp') }}">play station</a>
+            <a class="nav-link" href="{{ route('xboxp') }}">xbox</a>
+            <a class="nav-link" href="{{ route('preguntasp') }}" >preguntas</a>
           </div>
         </div>
       </nav>

@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\cr;
+use App\index;
 use Illuminate\Http\Request;
 
-class admin extends Controller
+class IndexController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,12 +14,7 @@ class admin extends Controller
      */
     public function index()
     {
-        //
-    }
-
-    public function preguntas()
-    {
-       return view('admin.preguntas');
+        return view('index.index');
     }
 
     /**
@@ -40,16 +35,18 @@ class admin extends Controller
      */
     public function store(Request $request)
     {
-        //
+       
+       
+
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\cr  $cr
+     * @param  \App\index  $index
      * @return \Illuminate\Http\Response
      */
-    public function show(cr $cr)
+    public function show(index $index)
     {
         //
     }
@@ -57,10 +54,10 @@ class admin extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\cr  $cr
+     * @param  \App\index  $index
      * @return \Illuminate\Http\Response
      */
-    public function edit(cr $cr)
+    public function edit(index $index)
     {
         //
     }
@@ -69,10 +66,10 @@ class admin extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\cr  $cr
+     * @param  \App\index  $index
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, cr $cr)
+    public function update(Request $request, index $index)
     {
         //
     }
@@ -80,10 +77,10 @@ class admin extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\cr  $cr
+     * @param  \App\index  $index
      * @return \Illuminate\Http\Response
      */
-    public function destroy(cr $cr)
+    public function destroy(index $index)
     {
         //
     }
