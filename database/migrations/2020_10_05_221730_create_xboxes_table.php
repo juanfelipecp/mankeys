@@ -14,7 +14,7 @@ class CreateXboxesTable extends Migration
     public function up()
     {
         Schema::create('xboxes', function (Blueprint $table) {
-            $table->bigIncrements('id_xbox');
+            $table->bigIncrements('id');
             $table->string('nombre',100);
             $table->string('descripcion',100);
             $table->string('precio',100);

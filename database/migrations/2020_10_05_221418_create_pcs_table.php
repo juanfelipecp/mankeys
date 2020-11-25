@@ -14,7 +14,7 @@ class CreatePcsTable extends Migration
     public function up()
     {
         Schema::create('pcs', function (Blueprint $table) {
-            $table->bigIncrements('id_pc');
+            $table->bigIncrements('id');
             $table->string('nombre',100);
             $table->string('descripcion',100);
             $table->string('precio',100);

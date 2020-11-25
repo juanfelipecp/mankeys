@@ -14,7 +14,7 @@ class CreatePlayStationsTable extends Migration
     public function up()
     {
         Schema::create('play_stations', function (Blueprint $table) {
-            $table->bigIncrements('id_play');
+            $table->bigIncrements('id');
             $table->string('nombre',100);
             $table->string('descripcion',100);
             $table->string('precio',100);
